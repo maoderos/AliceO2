@@ -74,8 +74,8 @@ void customize(std::vector<ConfigParamSpec>& workflowOptions)
     {"primary-vertex-mode", VariantType::Bool, false, {"produce jsons with individual primary vertices, not total time frame data"}},
     {"max-primary-vertices", VariantType::Int, 5, {"maximum number of primary vertices to draw per time frame"}},
     {"primary-vertex-triggers", VariantType::Bool, false, {"instead of drawing vertices with tracks (and maybe calorimeter triggers), draw vertices with calorimeter triggers (and maybe tracks)"}},
-    {"mft-propagation-z-min", VariantType::Float, 1.f, {"Set minimum z position for propagating MFT tracks (1 means the default value)"}},
-    {"mft-propagation-z-max", VariantType::Float, 1.f, {"Set maximum z position for propagating MFT tracks (1 means the default value)"}}};
+    {"mft-propagation-z-min", VariantType::Float, -39.f, {"Set minimum z position for propagating MFT tracks"}},
+    {"mft-propagation-z-max", VariantType::Float, -86.f, {"Set maximum z position for propagating MFT tracks"}}};
   o2::raw::HBFUtilsInitializer::addConfigOption(options);
   std::swap(workflowOptions, options);
 }
