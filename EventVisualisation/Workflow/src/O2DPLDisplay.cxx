@@ -339,7 +339,7 @@ WorkflowSpec defineDataProcessing(ConfigContext const& cfgc)
   auto tracksSorting = cfgc.options().get<bool>("track-sorting");
   auto primaryVertexTriggers = cfgc.options().get<bool>("primary-vertex-triggers");
   auto mftPropagationZMin = cfgc.options().get<float>("mft-propagation-z-min");
-  auto mftPropagationZMax = cfgc.options().get<float>("mft-propagation-z-max");  
+  auto mftPropagationZMax = cfgc.options().get<float>("mft-propagation-z-max");
 
   if (numberOfTracks == -1) {
     tracksSorting = false; // do not sort if all tracks are allowed
